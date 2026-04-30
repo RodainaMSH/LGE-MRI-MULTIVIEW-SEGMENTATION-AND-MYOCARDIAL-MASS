@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+venv/
+env/
+
+# Data
+data/
+
+# Attention U-Net (not ready)
+attention_unet.py
+train_attention_unet.py
+best_model_attention_unet.pth
+checkpoint_attention_unet_epoch*.pth
+training_history_attention_unet.json
+attention_unet_results_summary.json
+visualizations_attention_unet/
+ATTENTION_UNET_*.txt
+RAE_BUG_EXPLANATION.txt
+
+# Debug scripts
+debug_rae.py
+recalculate_rae.py
+extract_results.py
+understand_rae_bug.py
+
+# PDFs
+*.pdf
+
+# macOS
+.DS_Store
