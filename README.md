@@ -1,6 +1,6 @@
 # LGE MRI Multi-View Segmentation and Myocardial Mass Quantification
 
-**Authors:** Youssef Araby, Rodaina Hebishy,Youssef hazem, Mihael atef
+**Authors:** Youssef Araby, Rodaina Hebishy,Youssef Sharabas, Mihael atef
 **Institution:** Nile University, Department of Computer Science  
 **Course:** Deep Learning  
 **Date:** May 2026
