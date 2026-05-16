@@ -230,13 +230,13 @@ pip install -r requirements.txt
 - 5-fold cross-validation implementation
 - AttentionUnet experiment achieving highest segmentation accuracy
 
-**Youssef Hazem$$
+**Youssef Hazem**
 -U-Net Cardiac Cine MRI Segmentation — Multi-View
 
 
 ## Acknowledgments
 
-This work was completed as part of the Deep Learning course at MSA University, Department of Computer Science. Dataset provided by the CMR-MULTI Challenge.
+This work was completed as part of the Deep Learning course at Nile University, Department of Computer Science. Dataset provided by the CMR-MULTI Challenge.
 
 ## License
 
