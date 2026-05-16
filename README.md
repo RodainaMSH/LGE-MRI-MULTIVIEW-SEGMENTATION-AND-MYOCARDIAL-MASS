@@ -223,12 +223,16 @@ pip install -r requirements.txt
 **Rodaina Hebishy**
 - U-Net architecture implementation
 - Patient-specific voxel correction from DICOM metadata
-- Run 6 experiment achieving both clinical targets
+- Unet experiment achieving both clinical targets
 
 **Youssef Araby**
 - Attention U-Net architecture with attention gates
 - 5-fold cross-validation implementation
-- Run 4 experiment achieving highest segmentation accuracy
+- AttentionUnet experiment achieving highest segmentation accuracy
+
+**Youssef Hazem$$
+-U-Net Cardiac Cine MRI Segmentation — Multi-View
+
 
 ## Acknowledgments
 
@@ -242,13 +246,5 @@ This project is released for academic and research purposes.
 
 For questions or collaboration:
 - Rodaina Hebishy: [GitHub: RodainaMSH]
-- Youssef Araby: [GitHub: youssefsharabass]
-
----
-
-**MSA University | Department of Computer Science | May 2026**
-
----
-
-**Status**: Competition Ready ✅  
-**Last Updated**: April 2026
+- Youssef Araby: [GitHub: youssef-Araby]
+- Youssef Hazem: [GitHub: youssefsharabas]
