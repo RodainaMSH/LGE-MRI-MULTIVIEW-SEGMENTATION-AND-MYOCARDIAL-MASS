@@ -1,0 +1,8 @@
+[
+  {
+    "view": "SAX",
+    "best_val_dice": 0.8321514224866596,
+    "best_val_loss": 0.13245659060776233,
+    "output_dir": "/kaggle/working/boundary_unet_results/SAX"
+  }
+]
