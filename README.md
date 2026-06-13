@@ -155,14 +155,10 @@ entry points:
 | Cine training / EF | `nnunet/cine_resume.sh`, `nnunet/ef_pipeline.py` |
 | Out-of-fold evaluation (3 regimes) | `nnunet/oof_eval_run.py`, `nnunet/score_their_metric.py`, `nnunet/master_rows.py` |
 
-## Team & contributions
+## Team
 
-| Member | Task | Contribution |
-|---|---|---|
-| **Youssef Araby** | Task 2 · LGE | nnU-Net pipeline; encoder-transfer study; multi-architecture soft-vote ensemble; scar-mass decoupling & calibration |
-| **Rodaina Hebishy** | Task 2 · LGE | RAS expert; scar-mass quantification & multi-view combine; evaluation regimes; results analysis |
-| **Youssef Sharabas** | Task 1 · Cine | Cine multi-view segmentation (per-view experts, 5-fold); data preparation |
-| **Michael Atef** | Task 1 · Cine | Ejection-fraction pipeline; boundary metrics (HD / ASD); evaluation |
+Youssef Araby · Rodaina Hebishy · Youssef Sharabas · Michael Atef
+Nile University — Faculty of Informatics and Computer Science
 
 ## Acknowledgments
 
