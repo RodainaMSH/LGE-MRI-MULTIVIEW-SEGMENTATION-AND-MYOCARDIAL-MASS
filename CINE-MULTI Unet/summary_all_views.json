@@ -1,8 +1,3 @@
-[
-  {
-    "view": "SAX",
-    "best_val_dice": 0.8321514224866596,
-    "best_val_loss": 0.13245659060776233,
-    "output_dir": "/kaggle/working/boundary_unet_results/SAX"
-  }
-]
+version https://git-lfs.github.com/spec/v1
+oid sha256:bf336764d6c051971289dde6d68cfcbd77f495bc567671c9e139a8d2f543f665
+size 175
