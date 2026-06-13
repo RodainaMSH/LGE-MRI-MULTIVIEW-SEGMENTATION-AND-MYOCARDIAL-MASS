@@ -1,39 +1,46 @@
 # Python
 __pycache__/
-*.pyc
-*.pyo
-*.pyd
-.Python
+*.py[cod]
 *.so
-*.egg
 *.egg-info/
-dist/
-build/
+.venv/
 venv/
 env/
 
-# Data
+# Trained weights / checkpoints
+*.pth
+*.pt
+*.ckpt
+*.model
+checkpoints/
+weights/
+
+# Datasets (challenge data — not redistributable)
+LGE_MULTI/
+CINE_MULTI/
 data/
+*.nii
+*.nii.gz
+*.npz
+*.npy
 
-# Attention U-Net (not ready)
-attention_unet.py
-train_attention_unet.py
-best_model_attention_unet.pth
-checkpoint_attention_unet_epoch*.pth
-training_history_attention_unet.json
-attention_unet_results_summary.json
-visualizations_attention_unet/
-ATTENTION_UNET_*.txt
-RAE_BUG_EXPLANATION.txt
+# nnU-Net working directories
+nnUNet_raw/
+nnUNet_preprocessed/
+nnUNet_results/
+**/predictions/
+**/results/
+staged_splits/
 
-# Debug scripts
-debug_rae.py
-recalculate_rae.py
-extract_results.py
-understand_rae_bug.py
+# Logs / runs / visualisations
+runs/
+logs/
+*.log
+**/viz/
 
-# PDFs
+# Paper / build artifacts
+paper/
 *.pdf
 
-# macOS
+# OS
 .DS_Store

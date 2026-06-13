@@ -1,0 +1,21 @@
+# Core
+torch>=2.0
+torchvision
+numpy
+scipy
+pandas
+scikit-learn
+
+# Medical image I/O
+nibabel
+SimpleITK
+
+# Segmentation framework + pretrained encoders
+nnunetv2
+segmentation-models-pytorch
+batchgenerators
+acvl-utils
+
+# Utilities
+matplotlib
+tqdm
