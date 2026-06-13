@@ -59,7 +59,7 @@ convention-dependent, so we report three regimes:
 - **② Paper** — the challenge's per-slice convention (empty-in-both slices score 1.0); comparable to the leaderboard.
 - **③ Comp.** — the challenge metric on the 7 official validation patients (external check).
 
-**Task 2 — LGE (6-architecture ensemble):**
+**Task 2 — LGE: the ensemble across all three regimes**
 
 | Regime | Overall DSC | Scar DSC | Task-2 |
 |---|---|---|---|
@@ -67,12 +67,53 @@ convention-dependent, so we report three regimes:
 | ② Paper (per-slice) | 0.762 | 0.520 | 0.704 |
 | ③ Comp. (7 val) | 0.774 | 0.574 | 0.727 |
 
+**Task 2 — per-model comparison** (regime ①, out-of-fold on the 40 training patients):
+
+| Model | Overall DSC | Scar DSC | vPCC | Mass | Task-2 |
+|---|---|---|---|---|---|
+| **6-arch Ensemble** | **0.753** | **0.425** | 0.557 | 0.569 | 0.698 |
+| EffNetV2-XL | 0.746 | 0.411 | 0.576 | 0.585 | 0.697 |
+| EfficientNet-B7 | 0.742 | 0.400 | 0.538 | 0.569 | 0.690 |
+| EffNetV2-L | 0.741 | 0.396 | 0.571 | 0.581 | 0.693 |
+| DenseNet-264 | 0.739 | 0.393 | **0.650** | **0.620** | **0.704** |
+| ScarTversky | 0.727 | 0.362 | 0.513 | 0.546 | 0.673 |
+| PlainConv (from scratch) | 0.724 | 0.352 | 0.498 | 0.540 | 0.669 |
+| DenseNet-121 (RadImageNet) | 0.718 | 0.358 | 0.568 | 0.573 | 0.674 |
+| Hiera-tiny | 0.708 | 0.329 | 0.417 | 0.497 | 0.644 |
+| SAM2.1-large | 0.693 | 0.294 | 0.374 | 0.472 | 0.627 |
+
 The ensemble gives the best masks; **DenseNet-264** gives the best scar mass (vPCC 0.650). Combining
 them — **ensemble mask + DenseNet-264 mass (decoupled)** — yields **Task-2 ≈ 0.713**, above any single
-end-to-end model. Every ImageNet-pretrained encoder beats the from-scratch PlainConv baseline (0.724),
-while RadImageNet (medical pretraining) and SAM2 / MedSAM2 rank lowest.
+end-to-end model. Every ImageNet-pretrained encoder beats the from-scratch PlainConv baseline (0.724);
+RadImageNet (medical pretraining) and the foundation models (Hiera, SAM2) rank lowest.
 
-**Task 1 — Cine:** Cine DSC **0.859**, **EF-PCC 0.916** (MAE ≈ 3.6 %), HD ≈ 12.9 mm, ASD ≈ 0.85 mm.
+**Task 1 — Cine** (out-of-fold):
+
+| View | Cine DSC |
+|---|---|
+| SAX | 0.882 |
+| 2CH | 0.840 |
+| 4CH | 0.856 |
+| **Overall** | **0.859** |
+
+Ejection fraction: **EF-PCC 0.916** (MAE ≈ 3.6 %). Boundary metrics: HD ≈ 12.9 mm, ASD ≈ 0.85 mm.
+
+### Training & validation curves
+
+Representative nnU-Net curves (per epoch: training loss, validation loss, and the pseudo-Dice
+accuracy proxy). Logs and charts for every model and fold are kept with the project's training records.
+
+**Task 2 — EffNetV2-XL (LGE):**
+
+![EffNetV2-XL training curve](docs/training_effnetv2xl.png)
+
+**Task 2 — DenseNet-264 (LGE — best scar mass):**
+
+![DenseNet-264 training curve](docs/training_densenet264.png)
+
+**Task 1 — Cine SAX:**
+
+![Cine SAX training curve](docs/training_cine_sax.png)
 
 ## Repository structure
 
